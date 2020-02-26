@@ -17,7 +17,7 @@ app.use(
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Veryx@123",
+  password: #####",
   database: "licence"
 });
 app.get('/test',(req,res)=>{
