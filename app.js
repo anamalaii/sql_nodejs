@@ -18,13 +18,13 @@ var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "#####",
-  database: "licence"
+  database: "dbname"
 });
 app.get('/test',(req,res)=>{
   res.send("success");
 } )
 app.post('/login', (req, res) => {
-  con.query("SELECT password FROM user where username= ?", req.body.email, function (err, result, fields) {
+  con.query("SELECT password FROM tablename where username= ?", req.body.email, function (err, result, fields) {
     if (err) throw err;
     var obj = JSON.stringify(result);
     var json = JSON.parse(obj);
